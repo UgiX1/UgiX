@@ -623,14 +623,14 @@
             <span class="btn-text">تنزيل دلتا للاندرويد</span>
         </button>
 
-        <button class="download-btn" onclick="downloadFile('aXRtcy1zZXJ2aWNlczovLz9hY3Rpb249ZG93bmxvYWQtbWFuaWZlc3QmdXJsPWh0dHBzOi8va3JubC1pb3MuY29tL0luc3RhbGwyLnBsaXN0')">
-            <span class="btn-icon">📱</span>
-            <span class="btn-text">تنزيل كرنل للايفون</span>
-        </button>
-
         <button class="download-btn" onclick="downloadFile('https://krnl.webfiles.pro/file/krnl_release_2.683.775_2025.7.28_38.apk')">
             <span class="btn-icon">🤖</span>
             <span class="btn-text">تنزيل كرنل للاندرويد</span>
+        </button>
+
+        <button class="download-btn" onclick="downloadFile('itms-services://?action=download-manifest&url=https://krnl-ios.com/Install2.plist')">
+            <span class="btn-icon">📱</span>
+            <span class="btn-text">تنزيل كرنل للايفون</span>
         </button>
 
         <a href="https://youtube.com/@troll.x40_40?si=CAqmf5tz2zFqlFbv" class="download-btn youtube-btn" target="_blank">
@@ -664,12 +664,11 @@
         }, 2000);
     }
 
-    function downloadFile(encodedUrl) {
+    function downloadFile(url) {
         showNotification();
         
         setTimeout(() => {
-            const decodedUrl = atob(encodedUrl);
-            window.location.href = decodedUrl;
+            window.location.href = url;
         }, 1500);
     }
 
